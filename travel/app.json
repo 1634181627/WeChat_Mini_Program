@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "tabBar": {
+    "color": "#515151",
+    "selectedColor": "#BF8600",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "imgs/1.png",
+        "iconPath": "imgs/2.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "imgs/3.png",
+        "iconPath": "imgs/4.png",
+        "pagePath": "pages/logs/logs",
+        "text": "购物车"
+      },
+      {
+        "selectedIconPath": "imgs/5.png",
+        "iconPath": "imgs/6.png",
+        "pagePath": "pages/logs/logs",
+        "text": "我的"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "我的旅行",
+    "navigationBarTextStyle":"black"
+  }
+}
