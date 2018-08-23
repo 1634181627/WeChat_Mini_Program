@@ -1,0 +1,25 @@
+<!--pages/hotel/hotel.wxml-->
+<view class='container'>
+
+  <view class='hotel-title'>
+    <text>推荐酒店</text>
+  </view>
+
+
+  <view wx:key wx:for-items="{{hotel}}" wx:for-index="id">
+    <view class='hotel-wp' wx:if='{{id%2==0}}'>
+      <view class='hotel-img-wp'>
+        <image class='hotel-img' src='{{hotel[id].hImg}}'></image>
+        <text>{{hotel[id].hName}}</text>
+        <text class='red-txt'>￥{{hotel[id].hPrice}}</text>
+      </view>
+
+      <view class='hotel-img-wp'>
+        <image class='hotel-img' src='{{hotel[id+1].hImg}}'></image>
+        <text>{{hotel[id+1].hName}}</text>
+        <text class='red-txt'>￥{{hotel[id+1].hPrice}}</text>
+      </view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,44 @@
+/* pages/spot/spot.wxss */
+.container {
+  background-color: #eff2f9;
+}
+
+
+/* 景点 */
+.spot-wp {
+  width: 750rpx;
+}
+
+.spot-title {
+  width: 750rpx;
+  margin: 20rpx 0 20rpx 50rpx;  
+}
+
+.inner-spot-wp {
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.inner-img-wp {
+  width: 350rpx;
+  height: 450rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.inner-img-wp text {
+  margin-left: 20rpx;
+}
+
+.red-txt {
+  color: #ff4444;
+}
+
+.spot-img {
+  width: 350rpx;
+  height: 350rpx;
+}

@@ -1,0 +1,111 @@
+<!--pages/mine/mine.wxml-->
+<view class='container'>
+
+  <!-- 用户头像显示 Start-->
+  <view class='userinfo-wp'>
+    <view class="userinfo">
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+  </view>
+  <!-- 用户头像显示 End-->
+
+
+  <!-- 剩余积分 Start-->
+  <view class='my-point'>
+    <text>0</text>
+    <text class='text'>我的积分</text>
+  </view>
+  <!-- 剩余积分 End-->
+
+
+  <!-- 我的订单 Start-->
+  <view class='myOrder-wp'>
+
+    <view class='myOrder-title'>
+      <view>
+        <image src='../../imgs/order.png'></image>
+        我的订单
+      </view>
+      <image src='../../imgs/right.png'></image>
+    </view>
+
+    <view class='line'></view>
+
+    <view class='myOrder-item-wp'>
+
+      <view class='myOrder-item'>
+        <image src='../../imgs/pay.png'></image>
+        待付款
+      </view>
+
+      <view class='myOrder-item'>
+        <image src='../../imgs/travelling.png'></image>
+        待出行
+      </view>
+
+      <view class='myOrder-item'>
+        <image src='../../imgs/history.png'></image>
+        历史订单
+      </view>
+
+      <view class='myOrder-item'>
+        <image src='../../imgs/service.png'></image>
+        售后
+      </view>
+    </view>
+
+  </view>
+  <!-- 我的订单 End-->
+
+  <!-- 按钮 Start-->
+  <view class='list'>
+    <view class='myOrder-title'>
+      <view>
+        <image src='../../imgs/coupon.png'></image>
+        优惠券
+      </view>
+      <image src='../../imgs/right.png'></image>
+    </view>
+
+    <view class='line'></view>
+
+    <view class='myOrder-title'>
+      <view>
+        <image src='../../imgs/point.png'></image>
+        积分
+      </view>
+      <image src='../../imgs/right.png'></image>
+    </view>
+
+    <view class='line'></view>
+    <view class='line'></view>
+
+    <view class='myOrder-title'>
+      <view>
+        <image src='../../imgs/infor.png'></image>
+        添加信息
+      </view>
+      <image src='../../imgs/right.png'></image>
+    </view>
+
+    <view class='line'></view>
+    <view class='line'></view>
+
+
+    <view class='myOrder-title'>
+      <view>
+        <image src='../../imgs/4.png'></image>
+        购物车
+      </view>
+      <image src='../../imgs/right.png'></image>
+    </view>
+
+
+  </view>
+  <!-- 按钮 End-->
+
+</view>

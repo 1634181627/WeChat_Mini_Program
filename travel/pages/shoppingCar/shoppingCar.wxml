@@ -1,0 +1,89 @@
+<view class='container'>
+
+  <!-- 购物车空 Start-->
+  <view wx:if="{{true}}">
+    <view class='body-empty'>
+      <image class='empty-img' src='../../imgs/carEmpty.png'></image>
+      <text>您的购物车空空如也</text>
+      <text>快去找找美景看看去哪旅游吧</text>
+    </view>
+
+    <button class='look' bindtap='onLookTap'>
+      去逛一逛吧!
+    </button>
+
+    <!-- 底部 Start -->
+    <view class='bottom-wp'>
+      <view class='bottom-btn'>
+        <icon color='rgb(254, 66, 66)' type='success'></icon>
+        <image class='del' src='../../imgs/del.png'></image>
+      </view>
+
+      <view class='bottom-text'>
+        <text>合计</text>
+        <text class='red'>￥0.00</text>
+      </view>
+
+      <view class='bottom-sub'>
+        <button class='sub' disabled>结算</button>
+      </view>
+
+    </view>
+    <!-- 底部 End -->
+
+
+  </view>
+  <!-- 购物车空 End-->
+
+
+  <!-- 购物车满 Start-->
+  <view wx:else>
+
+    <!-- 景点 Start -->
+
+    <view class='spot-wp'>
+
+      <icon color='rgb(254, 66, 66)' type='success'></icon>
+
+      <view class='spot-img'>
+      <image></image>
+      </view>
+
+      <view class='spot-txt'>
+        <text></text>
+        <text></text>
+      </view>
+
+
+      <view class='spot-num'>
+      <button>-</button>
+      <input type='number' value='1' class='num-inp'></input>
+      <button>+</button>
+      </view>
+    </view>
+
+    <!-- 景点 End -->
+
+
+    <!-- 底部 Start -->
+    <view class='bottom-wp'>
+      <view class='bottom-btn'>
+        <icon color='rgb(254, 66, 66)' type='success'></icon>
+        <image class='del' src='../../imgs/del.png'></image>
+      </view>
+
+      <view class='bottom-text'>
+        <text>合计</text>
+        <text class='red'>￥0.00</text>
+      </view>
+
+      <view class='bottom-sub'>
+        <button class='sub-ab'>结算</button>
+      </view>
+
+    </view>
+    <!-- 底部 End -->
+
+  </view>
+  <!-- 购物车满 End-->
+</view>

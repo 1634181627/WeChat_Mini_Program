@@ -1,6 +1,11 @@
 {
-  "pages":[
+  "pages": [
+    "pages/hotel/hotel",
     "pages/index/index",
+    
+    "pages/spot/spot",           
+    "pages/mine/mine",
+    "pages/shoppingCar/shoppingCar",
     "pages/logs/logs"
   ],
   "tabBar": {
@@ -18,21 +23,21 @@
       {
         "selectedIconPath": "imgs/3.png",
         "iconPath": "imgs/4.png",
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/shoppingCar/shoppingCar",
         "text": "购物车"
       },
       {
         "selectedIconPath": "imgs/5.png",
         "iconPath": "imgs/6.png",
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/mine/mine",
         "text": "我的"
       }
     ]
   },
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "我的旅行",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   }
 }

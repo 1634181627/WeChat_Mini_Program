@@ -1,0 +1,111 @@
+.container {
+  background-color: #eff2f9;
+}
+
+.swiper {
+  height: 400rpx;
+  width: 100%;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+
+.button-wp {
+  width: 750rpx;
+  height: 100rpx;
+  background-color: #fff;
+}
+
+.button {
+  width: 720rpx;
+  height: 70rpx;
+  border: 1px solid #ccc;
+  font-size: 32rpx;
+  color: #999;
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.search-img {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.navbar-wp {
+  width: 750rpx;
+  height: 150rpx;
+  padding-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.navbar-item{
+  width: 100rpx;
+  height: 100rpx;
+  justify-items: center;
+  opacity: 0.5;
+  border-radius: 50%;
+  box-shadow: 0 0 30rpx #000;
+  box-sizing: border-box;
+  padding: 15rpx;
+}
+
+.navbar-img {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.text {
+  width: 760rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 32rpx;
+  color: #999;
+  margin-top: 10rpx;
+}
+
+/* 景点 */
+.spot-title {
+  width: 750rpx;
+  margin: 20rpx 0 20rpx 50rpx;
+  
+}
+
+.spot-wp {
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.spot-img-wp {
+  width: 350rpx;
+  height: 450rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.spot-img-wp text {
+  margin-left: 20rpx;
+}
+
+.red-txt {
+  color: #ff4444;
+}
+
+.spot-img {
+  width: 350rpx;
+  height: 350rpx;
+}

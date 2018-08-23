@@ -1,0 +1,41 @@
+/* pages/hotel/hotel.wxss */
+.container {
+  background-color: #eff2f9;
+}
+
+/* 景点 */
+.hotel-title {
+  width: 750rpx;
+  margin: 20rpx 0 20rpx 50rpx;
+  
+}
+
+.hotel-wp {
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.hotel-img-wp {
+  width: 350rpx;
+  height: 450rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.hotel-img-wp text {
+  margin-left: 20rpx;
+  font-size: 32rpx;
+}
+
+.red-txt {
+  color: #ff4444;
+}
+
+.hotel-img {
+  width: 350rpx;
+  height: 350rpx;
+}

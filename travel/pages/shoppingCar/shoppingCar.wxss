@@ -1,0 +1,118 @@
+/* pages/shoppingCar/shoppingCar.wxss */
+.body-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #999;
+}
+
+
+.empty-img {
+  margin: 200rpx 0 30rpx;
+  width: 400rpx;
+  height: 400rpx;
+  opacity: 0.5;
+}
+
+.look {
+  width: 300rpx;
+  background-color: #ff4444;
+  color: #fff;
+  margin-top: 50rpx;
+  font-size: 36rpx;
+}
+
+.bottom-wp {
+  width: 750rpx;
+  height: 120rpx;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1rpx solid rgb(221, 221, 221);
+}
+
+.bottom-btn {
+  margin-left: 50rpx;
+}
+
+.del {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.bottom-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 32rpx;
+}
+
+.red {
+  color: #ff4444;
+}
+
+.bottom-sub .sub {
+  border: none;
+  border-radius: none;
+  width: 200rpx;
+  height: 120rpx;
+  color: #fff;
+}
+
+.sub-ab {
+  border: none;
+  border-radius: none;
+  width: 200rpx;
+  height: 120rpx;
+  color: #fff;
+  background-color: #ff4444;
+}
+
+.spot-wp {
+  width: 750rpx;
+  height: 350rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.spot-img {
+  width: 200rpx;
+  height: 200rpx;
+  border: 1px solid #ccc;
+}
+
+.spot-txt {
+  width: 250rpx;
+  height: 200rpx;
+  background-color: #000;
+}
+
+.spot-num {
+  display: flex;
+  flex-direction: row;
+  width: 200rpx;
+  height: 70rpx;
+}
+
+.spot-num button {
+  width: 70rpx;
+  height: 70rpx;
+  display: flex;
+  align-items: center; 
+  box-sizing: border-box;
+  padding: 20rpx;
+}
+
+.num-inp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100rpx;
+  height: 65rpx;
+  border: 1rpx solid #ccc;
+}

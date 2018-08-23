@@ -1,1 +1,105 @@
+<view class="container">
 
+  <!-- 轮播图 -->
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+    <block wx:key wx:for="{{movies}}" wx:for-index="index">
+      <swiper-item>
+        <image src="{{item.timg}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!--搜索框  -->
+  <view class='button-wp'>
+    <button class='button'>
+      <image src='{{search}}' class='search-img'></image>
+      景点搜索：请输入景点信息
+    </button>
+  </view>
+
+
+  <!-- 导航栏 -->
+  <view class='navbar-wp'>
+
+    <view class='navbar'>
+      <view class='navbar-item' bindtap='onHotelTap'>
+        <image src='../../imgs/hotel.png' class='navbar-img'></image>
+      </view>
+      <view class='navbar-item' bindtap='onLookTap'>
+        <image src='../../imgs/spot.png' class='navbar-img'></image>
+      </view>
+      <view class='navbar-item'>
+        <image src='../../imgs/coupon.png' class='navbar-img'></image>
+      </view>
+    </view>
+
+    <view class='text'>
+      <view>
+        酒店
+      </view>
+
+      <view>
+        景点
+      </view>
+
+      <view>
+        优惠券
+      </view>
+    </view>
+
+  </view>
+
+
+  <!-- 热门景点 Start -->
+
+  <view class='spot-title'>
+    <text>热门景点</text>
+  </view>
+
+  <view wx:key wx:for-items="{{spot}}" wx:for-index="id">
+    <view class='spot-wp' wx:if='{{id<4&&id%2==0}}'>
+      <view class='spot-img-wp'>
+        <image class='spot-img' src='{{spot[id].tImg}}'></image>
+        <text>{{spot[id].tName}}</text>
+        <text class='red-txt'>￥{{spot[id].tPrice}}</text>
+      </view>
+
+      <view class='spot-img-wp'>
+        <image class='spot-img' src='{{spot[id+1].tImg}}'></image>
+        <text>{{spot[id+1].tName}}</text>
+        <text class='red-txt'>￥{{spot[id+1].tPrice}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 热门景点 End -->
+
+
+
+  <!-- 推荐景点 Start -->
+
+  <view class='spot-title'>
+    <text>推荐景点</text>
+  </view>
+
+  <view wx:key wx:for-items="{{spot}}" wx:for-index="id">
+    <view class='spot-wp' wx:if='{{id>=4&&id<8&&id%2==0}}'>
+      <view class='spot-img-wp' data-index='{{id}}'>
+        <image class='spot-img' src='{{spot[id].tImg}}'></image>
+        <text>{{spot[id].tName}}</text>
+        <text class='red-txt'>￥{{spot[id].tPrice}}</text>
+      </view>
+
+      <view class='spot-img-wp' data-index='{{id+1}}'>
+        <image class='spot-img' src='{{spot[id+1].tImg}}'></image>
+        <text>{{spot[id+1].tName}}</text>
+        <text class='red-txt'>￥{{spot[id+1].tPrice}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 推荐景点 End -->
+
+
+
+</view>

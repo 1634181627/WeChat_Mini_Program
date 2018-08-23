@@ -1,0 +1,43 @@
+<!--pages/spot/spot.wxml-->
+<view class='container'>
+
+  <!-- 景点 Start -->
+
+  <scroll-view class='spot-wp'>
+    <view wx:for-items="{{spot_type}}" wx:key='item.tTypeId' wx:for-index="index">
+      <view class='spot-title'>
+        {{item.tTypeName}}
+      </view>
+
+
+      <view class='spot-img-wp'>
+
+
+        <view wx:key wx:for-items="{{spot}}" wx:for-index="id">
+          <view class='inner-spot-wp' wx:if='{{spot[id].tTypeId==spot_type[index].tTypeId&&id%2==0}}'>
+
+            <view class='inner-img-wp'>
+              <image lazy-load='true' class='spot-img' src='{{spot[id].tImg}}'></image>
+              <text>{{spot[id].tName}}</text>
+              <text class='red-txt'>￥{{spot[id].tPrice}}</text>
+            </view>
+
+            <view class='inner-img-wp'>
+              <image lazy-load='true' class='spot-img' src='{{spot[id+1].tImg}}'></image>
+              <text>{{spot[id+1].tName}}</text>
+              <text class='red-txt'>￥{{spot[id+1].tPrice}}</text>
+            </view>
+
+          </view>
+        </view>
+
+
+      </view>
+
+
+    </view>
+  </scroll-view>
+
+  <!-- 景点 End -->
+
+</view>
