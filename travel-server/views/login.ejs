@@ -1,0 +1,66 @@
+<html>
+<head>
+    <title>我的旅行之登录</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <style>
+        .t1 {
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+<table class="t1">
+    <div class="container">
+        <form class="form-inline">
+            <label for="account">Account:</label>
+            <input type="account" class="form-control" id="acc" placeholder="Enter account">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox"> Remember me
+                </label>
+            </div>
+        </form>
+        <button class="btn btn-primary" onclick="checkAccount()">Login</button>
+    </div>
+</table>
+</body>
+<script>
+    function checkAccount() {
+        var account=document.getElementById('acc');
+        var accValue=account.value;
+        var password=document.getElementById('pwd');
+        var pwdValue=password.value;
+        if(accValue==""){
+            document.getElementById('acc').placeholder="账户不能为空！"
+        }
+        if(pwdValue==""){
+            document.getElementById('pwd').placeholder="密码不能为空！"
+        }
+        else {
+            var data="account="+accValue+"&&password="+pwdValue;
+            var http = new XMLHttpRequest();
+            http.open('post','http://localhost:8088/checkLogin',true);
+            http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            http.send(data);
+            http.onreadystatechange = function () {
+                if (http.readyState == 4 && http.status == 200) {
+                    var code = JSON.parse(http.responseText).result;
+                    if (code == 1) {
+                        window.location.href = "http://localhost:8088/blank";
+                    }
+                }
+            }
+        }
+    }
+</script>
+</html>
